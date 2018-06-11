@@ -1,0 +1,367 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliT0AnalysisTaskQA found in libT0calib  is already in libPWGPP
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.10/08                http://root.cern.ch |
+  |                               (c) 1995-2017, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-10-08, 16 October 2017                         |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+root [0]
+Processing runAnalysis.C...
+========================================================================================
+PIDResponse: Initialising AliAnalysisTaskPIDResponse
+========================================================================================
+(AliAnalysisTaskPIDResponse *) 0x3f4a290
+I-TUnixSystem::ACLiC: creating shared library /localhome/hoefler/alice/ALICE_analysis_tutorial/AliAnalysisTaskMyTask_cxx.so
+(AliAnalysisTaskMyTask *) 0x635ac60
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: PIDResponseTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+______________________________________________________________________________
+   task: name  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [MyOutputContainer]
+      Container: MyOutputContainer     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: MyTask
+I-AliAnalysisManager::SetUseProgressBar: Progress bar enabled, updated every 25 events.
+  ### NOTE: Debug level reset to 0 ###
+(TAlienJDL *) 0x26b5dd0
+(TAlienJDL *) 0x633d160
+I-AliAnalysisAlien::SetDefaultOutputs: Plugin will use the output files taken from analysis manager
+(TClass *) 0x6523c90
+===== RUNNING GRID ANALYSIS: AnalysisTaskExample
+I-AliAnalysisAlien::StartAnalysis:
+##### LOCAL MODE #####   Your analysis will be run locally on a subset of the requested
+                         dataset.
+### AliEn analysis plugin current settings ###
+=   OverwriteMode:________________________________ 1
+***** NOTE: Overwrite mode will overwrite the input generated datasets and partial results from previous analysis.
+*****       To disable, use: plugin->SetOverwriteMode(kFALSE);
+=   Copy files to grid: __________________________ YES
+=   Check if files can be copied to grid: ________ YES
+=   Production mode:______________________________ 0
+=   Version of API requested: ____________________ V1.1x
+=   Version of ROOT requested: ___________________
+=   Version of AliRoot requested: ________________
+=   Version of AliPhysics requested: _____________ vAN-20160330-2
+=   Grid workdir relative to user $HOME: _________ myWorkingDir
+=   Grid output directory relative to workdir: ___ myOutputDir
+=   Data base directory path requested: __________ /alice/data/2011/LHC11h_2
+=   Data search pattern: _________________________ *ESDs/pass2/AOD145/*AOD.root
+=   Input data format: ___________________________ xml-single
+=   Run numbers to be processed: _________________ 000167813
+=   Number of input files used in test mode: _____ 1
+=   List of output files to be registered: _______ AnalysisResults.root
+=   List of outputs going to be archived: ________ log_archive.zip:std*@disk=1 root_archive.zip:AnalysisResults.root,*.stat@disk=2
+=   List of outputs that should not be merged: ___
+=   List of outputs that should not be registered:
+=   List of outputs produced during Terminate: ___
+=====================================================================
+=   Job price: ___________________________________ 1
+=   Time to live (TTL): __________________________ 10000
+=   Max files per subjob: ________________________ 40
+=   Number of replicas for the output files_______ 2
+=   Number of runs per master job: _______________ 1
+=   Number of files in one chunk to be merged: ___ 100
+=   Name of the generated execution script: ______ myTask.sh
+=   Executable command: __________________________ root -b -q -x
+=   Name of the generated analysis macro: ________ myAnalysis.C
+=   User analysis files to be deployed: __________ AliAnalysisTaskMyTask.cxx
+=   Additional libs to be loaded or souces to be compiled runtime: <AliAnalysisTaskMyTask.cxx AliAnalysisTaskMyTask.h>
+=   Master jobs split mode: ______________________ se
+=   Custom name for the dataset to be created: ___
+=   Name of the generated JDL: ___________________ myTask.jdl
+=   Include path for runtime task compilation: ___ -I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include
+I-AliAnalysisAlien::Connect: Trying to connect to AliEn ...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User ahofler
+I-AliAnalysisAlien::Connect:
+#####   Connected to AliEn as user ahofler. Setting analysis user to <ahofler>
+I-AliAnalysisAlien::CheckFileCopy: Checking possibility to copy files to your AliEn home directory...
+ +++ NOTE: You can disable this via: plugin->SetCheckCopy(kFALSE);
+W-AliAnalysisAlien::CheckFileCopy: Your current close storage is empty ! Depending on your location, file copying may fail.
+180611 11:47:48 12075 Xrd: CheckErrorStatus: Server [grid149.kfki.hu:1094] declared: Unable to open /10/39573/698f8c4e-6d5c-11e8-b07b-001f29eb8d2a; too many open files in system(error code: 3005)
+180611 11:47:48 12075 Xrd: Open: Error opening the file /10/39573/698f8c4e-6d5c-11e8-b07b-001f29eb8d2a?&authz=-----BEGIN SEALED CIPHER-----
+esrpUBF0-2iL3xSWelu11eq-M165OGleBuc7VZ3cA0qZWsdf9wWUE1sHuu2t9Ru0qZQSo9i4PCte
+TR4P0nr1ZqUDgbNrTT-6YbYTGW0vFb7ncAHy6dfvm29OtyaUvESRpBYvz02EF7TVXphFKuKKUMx9
+c1htUG1KCOsBeSrY0YI=
+-----END SEALED CIPHER-----
+-----BEGIN SEALED ENVELOPE-----
+AAAAgEEqsx1ehrCzXXViCRTUQvLWe02BlStgMncjQOgelvqLtKEohAQD6eaRhtlZkX61Rykv2Mp2
+8tQk0X5tPR8vxI2kT7Eycg-iCdCrJHKybleEDAm5WXin+wCrYAku-61+W8pn4THwlLKE4mVXc9p2
+rNX-XxqWJzDQ8UfRu18HSk9ssFbg0Bnh88cy0677s4IxbvyoGbv7ZmhE3azJgydE3BKMHoRHmYoM
+ngysLvdxfFuGcI9bPYXm-y6uf6XuSi48HbrDW2KhcPbP8UqASGb0AXSCZQX+WCXqlxit2T1GgbSK
+2BE7tcVZ0U+ETUgGdPHKIoq5kiomLdFh4bcFggR7LMJeBNem8jIBYD1QsZokfVC3d3kIFQiD4Vxb
+MpFuGoCQsqADZN16of2xaS1O3YL7EU5InndXn5aCt0tFBOYhjXUCb7IQ6sSvRn5BmF4D456P5wdu
+5xX-QmfSvyIDR0bmFIMZoAHEqZxjlaEd-k3nwIDTTEYTHgL4MB-Sq3An0iUgwQ3YCtZquKAl1S7e
+zSwx2RUThGolI5DF2pP4u-RL2LquktBLX8rOh3w63uGjecD-VpgrSOjo2x7AGeVJ1qt4sI-I5Q1m
+jHmZSoF+ZpGfF5u0d8R58ZLw36Ap4xNQoOcpd3p2y+yp1NZa1AOQB5gh0KFuejfmF9PVzKSESXXl
+qIA0zpxOv-79V+4-1fYdxP3PxPikYRtMDs6VELXlSPkzNF+Og0TKIRNfMTtlJ-fC8ReIl942W26c
+Z-21LyKpopMg3B193UDyM9kT4cYq6BtWeaIyGKxbf6NNtIb5YAR5QmsN3O20lkFMYFvEcoXUSwNc
+3xW3jti5z+9UOTrmvZk7XC3-ZL+k2VSJiTETa7Q2ZZM0mJvjyn62n737jfKPeqHqmoiHa27EndX-
+R0QEguQlISnvF-5zccQ5sn7eKcXlDC6qOcOPRDkwvSTGmVSYql7ZUHHxcl-lrsvbSrgnZrGYB7pC
+k7EgWUtZd4FPbaviU5Ii1s5qbYMUUaVnBOQxI6Dwta+u9kiLCsTemEbLhy5otlSZVWEXGOuRWQ==
+-----END SEALED ENVELOPE-----
+&filetype=raw&source=plugin_test_copy on host grid149.kfki.hu:1094
+E-TXNetFile::CreateXClient: open attempt failed on alien:///alice/cern.ch/user/a/ahofler/plugin_test_copy?filetype=raw&source=plugin_test_copy&mkpath=1
+E-TFile::Cp: cannot open destination file alien:///alice/cern.ch/user/a/ahofler//plugin_test_copy
+E-AliAnalysisAlien::CheckFileCopy: Cannot copy files to Alien destination: </alice/cern.ch/user/a/ahofler/> This may be temporary, or:
+# 1. Make sure you have write permissions there. If this is the case:
+# 2. Check the storage availability at: http://alimonitor.cern.ch/stats?page=SE/table
+#    Do:           export alien_CLOSE_SE="working_disk_SE"
+#    To make this permanent put in in your .bashrc (in .alienshrc is not enough)
+#    Redo token:   rm /tmp/x509up_u$UID then: alien-token-init <username>
+I-AliAnalysisAlien::CheckDataType: Using supplied run numbers (run ranges are ignored)
+I-AliAnalysisAlien::CheckDataType:
+#####   file: /alice/cern.ch/user/a/ahofler/myWorkingDir/000167813.xml type: xml_collection; using_tags: No
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [2.1 MB/s]
+I-AliAnalysisAlien::CreateDataset: Created dataset wn.xml with 1 files
+I-AliAnalysisAlien::WriteAnalysisFile:
+#####   Analysis manager: AnalysisTaskExample wrote to file <myTask.root>
+
+I-AliAnalysisAlien::WriteAnalysisMacro:
+#####   Analysis macro to run on worker nodes <myAnalysis.C> written
+I-AliAnalysisAlien::StartAnalysis:
+_______________________________________________________________________
+   Running analysis script in a daughter shell as on a worker node
+_______________________________________________________________________
+=========================================
+############## PATH : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/bin:/localhome/hoefler/Tools/user_python/bin:/usr/local/cernlib/bin:/usr/local/cernlib/bin:/usr/lib64/qt-3.3/bin:/usr/NX/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hoefler/bin
+############## LD_LIBRARY_PATH : ##############
+.:/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib64/:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib64/:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/boost/v1.59.0-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/boost/v1.59.0-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib64:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib
+############## ROOTSYS : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1
+############## which root : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/bin/root
+############## ALICE_ROOT : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1
+############## which aliroot : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/bin/aliroot
+############## system limits : ##############
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 63646
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+############## memory : ##############
+              total        used        free      shared  buff/cache   available
+Mem:       16322296     2857528      926300      666368    12538468    12405384
+Swap:       8200188      364620     7835568
+=========================================
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.10/08                http://root.cern.ch |
+  |                               (c) 1995-2017, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-10-08, 16 October 2017                         |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+
+Processing myAnalysis.C...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User ahofler
+Include path: -I. -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc/cling" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/include" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include" -I"/usr/include/libxml2" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd/private" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB/COMMON/MULTIPLICITY" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/OADB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/CORRFW" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/CORRFW/" -I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include  -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc/cling" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/include" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/version" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/STEERBase" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/STEERBase/" -I"/usr/include/libxml2" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSIS" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSIS/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSISaliceBase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSISaliceBase/" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd/private" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/dateStream" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/STEER" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/ESD" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/ESD/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/AOD" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/AOD/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSISalice" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSISalice/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STAT" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STAT/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/CDB" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/CDB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatabase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatabase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatarec" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatarec/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/HLT/BASE/HOMER" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/HLT/BASE/HOMER/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/HLT/BASE" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/HLT/BASE/" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/STEER/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatasim" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatasim/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSbase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSbase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSsim" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSsim/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/VZERO/VZERObase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/VZERO/VZERObase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSrec" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSrec/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB/COMMON/MULTIPLICITY" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/include/pythia" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/OADB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/CORRFW" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/CORRFW/" -I"$ALICE_ROOT/include"
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: PIDResponseTask  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+______________________________________________________________________________
+   task: name  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [MyOutputContainer]
+      Container: MyOutputContainer     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: MyTask
+***************************************
+    Getting chain of trees aodTree
+***************************************
+### Run number detected from chain: 167813
+(TClass *) 0x6959ca0
+===== RUNNING LOCAL ANALYSIS AnalysisTaskExample ON TREE aodTree
+(TClass *) 0x6959ca0
+I-AliTOFPIDResponse::LoadTOFtailHisto: Loaded TOF tail histogram from file $ALICE_ROOT/TOF/data/addTOFtail.root
+Initialization time: 0.064692 [sec]
+I-AliAnalysisTaskPIDResponse::ConnectInputData: fInputHandler: 0x6a8ac10
+W-AliProdInfo::ParseProdInfo: No LPMRawPass= record found, attempting to extract pass from OutputDir
+W-AliProdInfo::ParseProdInfo: Failed to extract pass number, set to -1
+W-AliProdInfo::ParseProdInfo: No LPMProductionType= record found, attempting to extract production type from OutputDir
+W-AliProdInfo::ParseProdInfo: No LPMProductionTag= record found, attempting to extract production tag from OutputDir
+W-AliProdInfo::ParseProdInfo: No LPMAnchorProduction= record found, for raw data production tag  will be assigned
+I-AliProdInfo::List: ALICE Production Info found in UserInfo:
+I-AliProdInfo::List:   ALIROOT Version         : v5-01-Rev-19 [SVN #: 53703]
+I-AliProdInfo::List:   ROOT Version            : branches/v5-30-00-patches [SVN #: 41498]
+I-AliProdInfo::List:   Reconstruction Pass     : -1
+I-AliProdInfo::List:   Reconstruction Pass Name:
+I-AliProdInfo::List:   Run number              : -1
+I-AliProdInfo::List:   ProductionTag           :
+I-AliProdInfo::List:   MC Flag                 : 0
+I-AliProdInfo::List:   Anchor production:      :
+I-AliProdInfo::List:   Anchor pass name:       :
+I-AliProdInfo::List:   Anchor run:             : -1
+I-AliProdInfo::List:   - Buffered production tags:
+I-AliProdInfo::List:     v5-01-Rev-19:53703
+I-AliProdInfo::List:     branches/v5-30-00-patches:41498
+I-AliProdInfo::List:
+ <message repeated 7 times>
+I-AliAODpidUtil::InitializeTPCResponse: ---------------------------- TPC Response Configuration (New) ----------------------------
+I-AliTPCPIDResponse::InitFromOADB: ----------------------| Initialisation TPC PID Response from OADB |----------------------
+I-AliTPCPIDResponse::InitFromOADB: ----------------------| Run: 167813, pass: 2 - ESDs             |----------------------
+I-AliTPCPIDResponse::InitFromOADB: Trying to load splines for specific pass name ESDs.
+W-AliOADBContainer::GetIndexForRun: No object (TPCSplines) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TPCSplines) not found !
+
+I-AliTPCPIDResponse::InitFromOADB: No dedicated splines found for 'ESDs', check numerical pass 2.
+I-AliTPCPIDResponse::InitFromOADB: Trying to load splines for specific reconstruction pass 2.
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 0 - TSPLINE3_DATA_ELECTRON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = b44b183e1226f3e9e4cf112eaed3bf13)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 1 - TSPLINE3_DATA_PION_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 1f19e9adb7a578646e469da0c2f6bea2)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 2 - TSPLINE3_DATA_PION_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 1f19e9adb7a578646e469da0c2f6bea2)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 3 - TSPLINE3_DATA_KAON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = f274a4a6966ef5764c1c72df320d3e24)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 4 - TSPLINE3_DATA_PROTON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 5fe22b05f2ca064d750696e55debf5cb)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 5 - TSPLINE3_DATA_PROTON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 5fe22b05f2ca064d750696e55debf5cb)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 6 - TSPLINE3_DATA_TRITON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 13e4dd85f4c6890f8d86c37961de3f94)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 7 - TSPLINE3_DATA_PROTON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 5fe22b05f2ca064d750696e55debf5cb)
+I-AliTPCPIDResponse::SetSplinesFromArray: Adding spline: 8 - TSPLINE3_DATA_PROTON_LHC11H_PASS2_PBPB_MEAN (MD5(spline) = 5fe22b05f2ca064d750696e55debf5cb)
+I-AliAODpidUtil::InitializeTPCResponse: ------------------------------------------------------------------------------------------
+I-AliAODpidUtil::SetTPCEtaMaps: Current period and reco pass: LHC11H.pass2 (ESDs)
+I-AliAODpidUtil::SetTPCEtaMaps: Trying to load map container for specific pass name ESDs.
+E-AliOADBContainer::InitFromFile: Object (TPCetaMaps_DATA_pass2) not found in file
+
+I-AliAODpidUtil::SetTPCEtaMaps: No dedicated map container found for 'ESDs', check numerical pass 2.
+I-AliAODpidUtil::SetTPCEtaMaps: Loading TPC eta correction map from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TPCetaMaps.root (TPCetaMaps_DATA_pass2)
+W-AliOADBContainer::GetIndexForRun: No object (TPCetaMaps_DATA_pass2) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TPCetaMaps_DATA_pass2) not found !
+
+E-AliAODpidUtil::SetTPCEtaMaps: TPC eta correction map not found for run 167813 and also no default map found -> Disabled eta correction!!!
+E-AliAODpidUtil::SetTPCEtaMaps: Failed to load TPC eta correction map required by sigma maps -> Using old parametrisation for sigma
+I-AliAODpidUtil::SetTRDPidResponseMaster: Loading TRD Response from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TRDPIDResponse.root
+W-AliOADBContainer::GetIndexForRun: No object (AliTRDPIDResponseObject) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (AliTRDPIDResponseObject) not found !
+
+E-AliAODpidUtil::SetTRDPidResponseMaster: TRD Response not found in run 167813
+I-AliAODpidUtil::SetTRDdEdxParams: Loading TRDdEdxParamsContainer from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TRDdEdxParams.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDdEdxParamsContainer) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDdEdxParamsContainer) not found !
+
+E-AliAODpidUtil::SetTRDdEdxParams: TRD dEdx Params default not found
+I-AliAODpidUtil::SetTRDEtaMaps: Loading TRDCorrectionMaps from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDCorrectionMaps) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDCorrectionMaps) not found !
+
+E-AliAODpidUtil::SetTRDEtaMaps: TRD Eta Correction Params not found
+I-AliAODpidUtil::SetTRDClusterMaps: Loading TRDCorrectionMaps from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDCorrectionMaps) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDCorrectionMaps) not found !
+
+E-AliAODpidUtil::SetTRDClusterMaps: TRD Cluster Correction Params not found
+I-AliAODpidUtil::SetTRDCentralityMaps: Loading TRDCorrectionMaps from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TRDdEdxCorrectionMaps.root
+
+W-AliOADBContainer::GetIndexForRun: No object (TRDCorrectionMaps) found for run 167813 !
+
+ <message repeated 1 time>
+E-AliOADBContainer::GetObject: Default Object (TRDCorrectionMaps) not found !
+
+I-AliAODpidUtil::SetTRDCentralityMaps: TRD Centrality Correction Params not found
+I-AliAODpidUtil::SetTOFPidResponseMaster: Loading TOF Params from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/TOFPIDParams.root for run 167813 (pass: pass2)
+I-AliAODpidUtil::InitializeTOFResponse: ---------------------------- TOF Response Configuration ----------------------------
+I-AliAODpidUtil::InitializeTOFResponse: TOF PID Params loaded from OADB [entryTag: LHC11h-pass2]
+I-AliAODpidUtil::InitializeTOFResponse:   TOF resolution 80.00 [ps]
+I-AliAODpidUtil::InitializeTOFResponse:   StartTime method 1
+I-AliAODpidUtil::InitializeTOFResponse:   TOF res. mom. params:  0.008  0.008  0.002 40.000
+I-AliAODpidUtil::InitializeTOFResponse:   Start Time Offset   0.00 ps
+I-AliAODpidUtil::InitializeTOFResponse:   Fraction of tracks within gaussian behaviour: 0.9500
+I-AliAODpidUtil::InitializeTOFResponse:   MC: Fraction of tracks (percentage) to cut to fit matching in data:   5.00%
+I-AliAODpidUtil::InitializeTOFResponse:   MC: Fraction of random hits (percentage) to add to fit mismatch in data:   2.50%
+I-AliAODpidUtil::InitializeTOFResponse: TZERO resolution loaded from ESDrun/AODheader
+I-AliAODpidUtil::InitializeTOFResponse:   TZERO spreads from data: (A+C)/2 267.001038 A 265.826599 C 264.383942 (A'-C')/2: 26.023169
+I-AliAODpidUtil::InitializeTOFResponse:   TZERO spreads not present or inconsistent, loading default
+I-AliAODpidUtil::InitializeTOFResponse:   TZERO resolution set to: T0A: 75.000000 [ps] T0C: 65.000000 [ps] T0AC 55.000000 [ps]
+I-AliAODpidUtil::InitializeTOFResponse: ------------------------------------------------------------------------------------
+I-AliAODpidUtil::SetEMCALPidResponseMaster: Loading EMCAL Params from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/EMCALPIDParams.root
+I-AliAODpidUtil::SetHMPIDPidResponseMaster: Loading HMPID Params from /localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/OADB/COMMON/PID/data/HMPIDPIDParams.root
+ *** TDatabasePDG::AddParticle: particle with PDGcode=3124 already defined
+ *** TDatabasePDG::AddAntiParticle: can't redefine parameters
+Real time 0:01:14, CP time 8.420
+======== myAnalysis.C finished with exit code: 0 ========
+############## memory after: ##############
+              total        used        free      shared  buff/cache   available
+Mem:          15939        2793         885         666       12261       12095
+Swap:          8007         356        7651
+*******************************************************
+* Automatically generated validation script           *
+* Time:    Mon Jun 11 11:49:20 CEST 2018
+* Dir:     .
+* Workdir: /localhome/hoefler/alice/ALICE_analysis_tutorial
+* ----------------------------------------------------*
+total 726460
+drwxr-xr-x  3 hoefler users      4096 Jun 11 11:49 .
+drwxr-xr-x 10 hoefler users      4096 May 15 17:03 ..
+-rw-r--r--  1 hoefler users    143213 Jun 11 11:24 000167813.xml
+-rw-r--r--  1 hoefler users      1652 May 14 11:14 AddMyTask.C
+-rw-r--r--  1 hoefler users      4329 Jun  5 15:58 AddTaskPIDResponse.C
+-rw-r--r--  1 hoefler users     10481 Jun  6 14:09 AliAnalysisTaskMyTask.cxx
+-rw-r--r--  1 hoefler users      2420 Jun 11 11:46 AliAnalysisTaskMyTask_cxx_ACLiC_dict_rdict.pcm
+-rw-r--r--  1 hoefler users     21363 Jun 11 11:46 AliAnalysisTaskMyTask_cxx.d
+-rwxr-xr-x  1 hoefler users    336368 Jun 11 11:46 AliAnalysisTaskMyTask_cxx.so
+-rw-r--r--  1 hoefler users      1879 Jun  6 13:27 AliAnalysisTaskMyTask.h
+-rw-r-----  1 hoefler users 743217676 Aug  9  2016 AliAOD.root
+-rw-r--r--  1 hoefler users     37333 Jun 11 11:49 AnalysisResults.root
+drwxr-xr-x  8 hoefler users      4096 May 14 11:14 .git
+-rw-r--r--  1 hoefler users        35 May 14 11:14 .gitignore
+-rw-r--r--  1 hoefler users      3602 Jun 11 11:48 myAnalysis.C
+-rw-r--r--  1 hoefler users      1622 Jun 11 11:24 myTask.jdl
+-rw-r--r--  1 hoefler users      3326 Jun 11 11:48 myTask_merge.C
+-rw-r--r--  1 hoefler users      1629 Jun 11 11:24 myTask_merge_final.jdl
+-rw-r--r--  1 hoefler users      1891 Jun 11 11:24 myTask_merge.jdl
+-rw-r--r--  1 hoefler users      1359 Jun 11 11:48 myTask_merge.sh
+-rw-r--r--  1 hoefler users     11840 Jun 11 11:48 myTask.root
+-rw-r--r--  1 hoefler users      1408 Jun 11 11:48 myTask.sh
+-rw-r--r--  1 hoefler users      2058 Jun 11 11:48 myTask_validation_merge.sh
+-rw-r--r--  1 hoefler users      2256 Jun 11 11:48 myTask_validation.sh
+-rw-r--r--  1 hoefler users         0 Jun 11 11:49 outputs_valid
+-rw-r--r--  1 hoefler users        89 May 14 11:14 README.md
+-rw-r--r--  1 hoefler users      4861 Jun 11 11:46 runAnalysis.C
+-rw-r--r--  1 hoefler users       322 Jun 11 11:30 Stage_1.xml
+-rw-r--r--  1 hoefler users       116 Jun 11 11:48 stderr
+-rw-r--r--  1 hoefler users       852 Jun 11 11:48 wn.xml
+* ----------------------------------------------------*
+* ----------------   Job Validated  ------------------*
+* ----------------------------------------------------*
+*******************************************************
+/localhome/hoefler/alice/ALICE_analysis_tutorial
+I-AliAnalysisManager::StartAnalysis: Grid analysis was stopped and cannot be terminated
