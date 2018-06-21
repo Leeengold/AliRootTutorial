@@ -1,0 +1,136 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliT0AnalysisTaskQA found in libT0calib  is already in libPWGPP
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.10/08                http://root.cern.ch |
+  |                               (c) 1995-2017, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-10-08, 16 October 2017                         |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+root [0]
+Processing runAnalysis.C...
+I-TUnixSystem::ACLiC: creating shared library /localhome/hoefler/alice/ALICE_analysis_tutorial/AliAnalysisTaskMyTask_cxx.so
+(AliAnalysisTaskMyTask *) 0x5c9e520
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: name  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [MyOutputContainer]
+      Container: MyOutputContainer     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: MyTask
+I-AliAnalysisManager::SetUseProgressBar: Progress bar enabled, updated every 25 events.
+  ### NOTE: Debug level reset to 0 ###
+(TAlienJDL *) 0x30dedc0
+(TAlienJDL *) 0x5f0cdf0
+I-AliAnalysisAlien::SetDefaultOutputs: Plugin will use the output files taken from analysis manager
+(TClass *) 0x5f090e0
+===== RUNNING GRID ANALYSIS: AnalysisTaskExample
+I-AliAnalysisAlien::StartAnalysis:
+##### FULL ANALYSIS MODE ##### Producing needed files and submitting your analysis job...
+### AliEn analysis plugin current settings ###
+=   OverwriteMode:________________________________ 1
+***** NOTE: Overwrite mode will overwrite the input generated datasets and partial results from previous analysis.
+*****       To disable, use: plugin->SetOverwriteMode(kFALSE);
+=   Copy files to grid: __________________________ YES
+=   Check if files can be copied to grid: ________ YES
+=   Production mode:______________________________ 0
+=   Version of API requested: ____________________ V1.1x
+=   Version of ROOT requested: ___________________
+=   Version of AliRoot requested: ________________
+=   Version of AliPhysics requested: _____________ vAN-20160330-2
+=   Grid workdir relative to user $HOME: _________ myWorkingDir
+=   Grid output directory relative to workdir: ___ myOutputDir
+=   Data base directory path requested: __________ /alice/data/2011/LHC11h_2
+=   Data search pattern: _________________________ *ESDs/pass2/AOD145/*AOD.root
+=   Input data format: ___________________________ xml-single
+=   Run numbers to be processed: _________________ 000167813
+=   List of output files to be registered: _______ AnalysisResults.root
+=   List of outputs going to be archived: ________ log_archive.zip:std*@disk=1 root_archive.zip:AnalysisResults.root,*.stat@disk=2
+=   List of outputs that should not be merged: ___
+=   List of outputs that should not be registered:
+=   List of outputs produced during Terminate: ___
+=====================================================================
+=   Job price: ___________________________________ 1
+=   Time to live (TTL): __________________________ 10000
+=   Max files per subjob: ________________________ 40
+=   Number of replicas for the output files_______ 2
+=   Number of runs per master job: _______________ 1
+=   Number of files in one chunk to be merged: ___ 100
+=   Name of the generated execution script: ______ myTask.sh
+=   Executable command: __________________________ root -b -q -x
+=   Name of the generated analysis macro: ________ myAnalysis.C
+=   User analysis files to be deployed: __________ AliAnalysisTaskMyTask.cxx
+=   Additional libs to be loaded or souces to be compiled runtime: <AliAnalysisTaskMyTask.cxx AliAnalysisTaskMyTask.h>
+=   Master jobs split mode: ______________________ se
+=   Custom name for the dataset to be created: ___
+=   Name of the generated JDL: ___________________ myTask.jdl
+=   Include path for runtime task compilation: ___ -I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include
+I-AliAnalysisAlien::Connect: Trying to connect to AliEn ...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User ahofler
+I-AliAnalysisAlien::Connect:
+#####   Connected to AliEn as user ahofler. Setting analysis user to <ahofler>
+I-AliAnalysisAlien::CheckFileCopy: Checking possibility to copy files to your AliEn home directory...
+ +++ NOTE: You can disable this via: plugin->SetCheckCopy(kFALSE);
+W-AliAnalysisAlien::CheckFileCopy: Your current close storage is empty ! Depending on your location, file copying may fail.
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [0.4 MB/s]
+I-AliAnalysisAlien::CheckFileCopy: ### ...SUCCESS ###
+I-AliAnalysisAlien::CheckDataType: Using supplied run numbers (run ranges are ignored)
+I-AliAnalysisAlien::CheckDataType:
+#####   file: /alice/cern.ch/user/a/ahofler/myWorkingDir/000167813.xml type: xml_collection; using_tags: No
+[TFile::Cp] Total 0.14 MB	|====================| 100.00 % [127.6 MB/s]
+I-AliAnalysisAlien::CreateDataset: Created dataset 000167813.xml with 267 files
+[TFile::Cp] Total 0.14 MB	|====================| 100.00 % [0.6 MB/s]
+I-AliAnalysisAlien::WriteAnalysisFile:
+#####   Analysis manager: AnalysisTaskExample wrote to file <myTask.root>
+
+I-AliAnalysisAlien::WriteAnalysisFile:
+#####   Copying file <myTask.root> containing your initialized analysis manager to your alien workspace
+[TFile::Cp] Total 0.01 MB	|====================| 100.00 % [20.1 MB/s]
+I-AliAnalysisAlien::WriteAnalysisMacro:
+#####   Analysis macro to run on worker nodes <myAnalysis.C> written
+I-AliAnalysisAlien::WriteAnalysisMacro:
+#####   Copying analysis macro: <myAnalysis.C> to your alien workspace
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [9.0 MB/s]
+I-AliAnalysisAlien::WriteExecutable:
+#####   Copying executable file <myTask.sh> to your AliEn bin directory
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [5.9 MB/s]
+I-AliAnalysisAlien::WriteValidationScript:
+#####   Copying validation script <myTask_validation.sh> to your AliEn working space
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [7.0 MB/s]
+I-AliAnalysisAlien::WriteMergingMacro:
+#####   Copying merging macro: <myTask_merge.C> to your alien workspace
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [12.2 MB/s]
+I-AliAnalysisAlien::WriteMergeExecutable:
+#####   Copying executable file <myTask_merge.sh> to your AliEn bin directory
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [12.2 MB/s]
+I-AliAnalysisAlien::WriteValidationScript:
+#####   Copying validation script <myTask_validation_merge.sh> to your AliEn working space
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [8.2 MB/s]
+W-AliAnalysisAlien::CreateJDL: #### Output directory /alice/cern.ch/user/a/ahofler//myWorkingDir/myOutputDir exists! If this contains old data, jobs will fail with ERROR_SV !!! ###
+I-AliAnalysisAlien::WriteJDL:
+#####   Copying JDL file <myTask.jdl> to your AliEn output directory
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [7.0 MB/s]
+I-AliAnalysisAlien::WriteJDL:
+#####   Copying merging JDL files <myTask_merge.jdl> to your AliEn output directory
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [10.1 MB/s]
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [7.3 MB/s]
+I-AliAnalysisAlien::CreateJDL:
+#####   Copying dependency: <AliAnalysisTaskMyTask.cxx> to your alien workspace
+[TFile::Cp] Total 0.01 MB	|====================| 100.00 % [40.9 MB/s]
+I-AliAnalysisAlien::CreateJDL:
+#####   Copying dependency: <AliAnalysisTaskMyTask.h> to your alien workspace
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [6.4 MB/s]
+********* submit myTask.jdl 000167813.xml 000167813
+Jun 21 15:17:29  info	In checkFileQuota for user: ahofler, request file size:0
+Jun 21 15:17:29  info	In checkFileQuota ahofler: Allowed
+Jun 21 15:17:30  info	Submitting job '/alice/cern.ch/user/a/ahofler/myWorkingDir/myTask.sh '...
+Jun 21 15:17:30  info	*** calling PackMan with arguments list -silent -all -force
+Jun 21 15:17:30  info	Calling directly getListPackages (list -silent -all -force)
+Jun 21 15:17:30  info	Asking the PackMan for the packages that it knows
+Jun 21 15:17:32  error	The package VO_ALICE@AliPhysics::vAN-20160330-2 is not defined in PackMan/CVMFS.
+E-AliAnalysisAlien::StartAnalysis: Your JDL myTask.jdl could not be submitted. The message was:
+I-AliAnalysisManager::StartAnalysis: Grid analysis was stopped and cannot be terminated

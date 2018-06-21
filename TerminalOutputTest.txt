@@ -1,0 +1,212 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliT0AnalysisTaskQA found in libT0calib  is already in libPWGPP
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.10/08                http://root.cern.ch |
+  |                               (c) 1995-2017, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-10-08, 16 October 2017                         |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+root [0]
+Processing runAnalysis.C...
+I-TUnixSystem::ACLiC: creating shared library /localhome/hoefler/alice/ALICE_analysis_tutorial/AliAnalysisTaskMyTask_cxx.so
+(AliAnalysisTaskMyTask *) 0x64534c0
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: name  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [MyOutputContainer]
+      Container: MyOutputContainer     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: MyTask
+I-AliAnalysisManager::SetUseProgressBar: Progress bar enabled, updated every 25 events.
+  ### NOTE: Debug level reset to 0 ###
+(TAlienJDL *) 0x4a5f420
+(TAlienJDL *) 0x67f3680
+I-AliAnalysisAlien::SetDefaultOutputs: Plugin will use the output files taken from analysis manager
+(TClass *) 0x4a5b030
+===== RUNNING GRID ANALYSIS: AnalysisTaskExample
+I-AliAnalysisAlien::StartAnalysis:
+##### LOCAL MODE #####   Your analysis will be run locally on a subset of the requested
+                         dataset.
+### AliEn analysis plugin current settings ###
+=   OverwriteMode:________________________________ 1
+***** NOTE: Overwrite mode will overwrite the input generated datasets and partial results from previous analysis.
+*****       To disable, use: plugin->SetOverwriteMode(kFALSE);
+=   Copy files to grid: __________________________ YES
+=   Check if files can be copied to grid: ________ YES
+=   Production mode:______________________________ 0
+=   Version of API requested: ____________________ V1.1x
+=   Version of ROOT requested: ___________________
+=   Version of AliRoot requested: ________________
+=   Version of AliPhysics requested: _____________ vAN-20160330-2
+=   Grid workdir relative to user $HOME: _________ myWorkingDir
+=   Grid output directory relative to workdir: ___ myOutputDir
+=   Data base directory path requested: __________ /alice/data/2011/LHC11h_2
+=   Data search pattern: _________________________ *ESDs/pass2/AOD145/*AOD.root
+=   Input data format: ___________________________ xml-single
+=   Run numbers to be processed: _________________ 000167813
+=   Number of input files used in test mode: _____ 1
+=   List of output files to be registered: _______ AnalysisResults.root
+=   List of outputs going to be archived: ________ log_archive.zip:std*@disk=1 root_archive.zip:AnalysisResults.root,*.stat@disk=2
+=   List of outputs that should not be merged: ___
+=   List of outputs that should not be registered:
+=   List of outputs produced during Terminate: ___
+=====================================================================
+=   Job price: ___________________________________ 1
+=   Time to live (TTL): __________________________ 10000
+=   Max files per subjob: ________________________ 40
+=   Number of replicas for the output files_______ 2
+=   Number of runs per master job: _______________ 1
+=   Number of files in one chunk to be merged: ___ 100
+=   Name of the generated execution script: ______ myTask.sh
+=   Executable command: __________________________ root -b -q -x
+=   Name of the generated analysis macro: ________ myAnalysis.C
+=   User analysis files to be deployed: __________ AliAnalysisTaskMyTask.cxx
+=   Additional libs to be loaded or souces to be compiled runtime: <AliAnalysisTaskMyTask.cxx AliAnalysisTaskMyTask.h>
+=   Master jobs split mode: ______________________ se
+=   Custom name for the dataset to be created: ___
+=   Name of the generated JDL: ___________________ myTask.jdl
+=   Include path for runtime task compilation: ___ -I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include
+I-AliAnalysisAlien::Connect: Trying to connect to AliEn ...
+=> Trying to connect to Server [0] root://pcapiserv03.cern.ch:10000 as User ahofler
+I-AliAnalysisAlien::Connect:
+#####   Connected to AliEn as user ahofler. Setting analysis user to <ahofler>
+I-AliAnalysisAlien::CheckFileCopy: Checking possibility to copy files to your AliEn home directory...
+ +++ NOTE: You can disable this via: plugin->SetCheckCopy(kFALSE);
+W-AliAnalysisAlien::CheckFileCopy: Your current close storage is empty ! Depending on your location, file copying may fail.
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [0.3 MB/s]
+I-AliAnalysisAlien::CheckFileCopy: ### ...SUCCESS ###
+I-AliAnalysisAlien::CheckDataType: Using supplied run numbers (run ranges are ignored)
+I-AliAnalysisAlien::CheckDataType:
+#####   file: /alice/cern.ch/user/a/ahofler/myWorkingDir/000167813.xml type: xml_collection; using_tags: No
+[TFile::Cp] Total 0.00 MB	|====================| 100.00 % [4.8 MB/s]
+I-AliAnalysisAlien::CreateDataset: Created dataset wn.xml with 1 files
+I-AliAnalysisAlien::WriteAnalysisFile:
+#####   Analysis manager: AnalysisTaskExample wrote to file <myTask.root>
+
+I-AliAnalysisAlien::WriteAnalysisMacro:
+#####   Analysis macro to run on worker nodes <myAnalysis.C> written
+I-AliAnalysisAlien::StartAnalysis:
+_______________________________________________________________________
+   Running analysis script in a daughter shell as on a worker node
+_______________________________________________________________________
+=========================================
+############## PATH : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/bin:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/bin:/localhome/hoefler/Tools/user_python/bin:/usr/local/cernlib/bin:/localhome/hoefler/Tools/user_python/bin:/usr/local/cernlib/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/hoefler/bin
+############## LD_LIBRARY_PATH : ##############
+.:/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib64/:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib64/:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/boost/v1.59.0-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/lib/:/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/fastjet/v3.2.1_1.024-alice3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/cgal/v4.6.3-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/boost/v1.59.0-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/Python-modules/1.0-1/lib64:/localhome/hoefler/alice/sw/slc7_x86-64/GSL/v1.16-1/lib:/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/lib
+############## ROOTSYS : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1
+############## which root : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/bin/root
+############## ALICE_ROOT : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1
+############## which aliroot : ##############
+/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/bin/aliroot
+############## system limits : ##############
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 63646
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+############## memory : ##############
+              total        used        free      shared  buff/cache   available
+Mem:       16322296     2235084      577024      440664    13510188    13266200
+Swap:       8200188           0     8200188
+=========================================
+   ------------------------------------------------------------
+  | Welcome to ROOT 6.10/08                http://root.cern.ch |
+  |                               (c) 1995-2017, The ROOT Team |
+  | Built for linuxx8664gcc                                    |
+  | From tag v6-10-08, 16 October 2017                         |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
+   ------------------------------------------------------------
+
+
+Processing myAnalysis.C...
+=> Trying to connect to Server [1] root://pcapiserv08.cern.ch:10000 as User ahofler
+Include path: -I. -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc/cling" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/include" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include" -I"/usr/include/libxml2" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd/private" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB/COMMON/MULTIPLICITY" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/OADB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/CORRFW" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/CORRFW/" -I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include  -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliPhysics/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/Vc/1.3.3-1/include" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/etc/cling" -I"/localhome/hoefler/alice/sw/slc7_x86-64/ROOT/v6-10-08-1/include" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux" -I"/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/version" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/STEERBase" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/STEERBase/" -I"/usr/include/libxml2" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSIS" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSIS/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSISaliceBase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSISaliceBase/" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliEn-Runtime/v2-19-le-1/include/xrootd/private" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/dateStream" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/STEER" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/ESD" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/ESD/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/AOD" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/AOD/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ANALYSIS/ANALYSISalice" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ANALYSIS/ANALYSISalice/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STAT" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STAT/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/STEER/CDB" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/CDB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatabase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatabase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatarec" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatarec/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/HLT/BASE/HOMER" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/HLT/BASE/HOMER/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/HLT/BASE" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/HLT/BASE/" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/STEER/STEER/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/RAW/RAWDatasim" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/RAW/RAWDatasim/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSbase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSbase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSsim" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSsim/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/VZERO/VZERObase" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/VZERO/VZERObase/" -I"/localhome/hoefler/alice/sw/SOURCES/AliRoot/master/0/ITS/ITSrec" -I"/localhome/hoefler/alice/sw/BUILD/7f36a4b54d29029d5f2a40e8e45d80152443edc4/AliRoot/ITS/ITSrec/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB/COMMON/MULTIPLICITY" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/OADB" -I"/localhome/hoefler/alice/sw/slc7_x86-64/AliRoot/master-1/include/pythia" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/OADB/" -I"/localhome/hoefler/alice/sw/SOURCES/AliPhysics/master/0/CORRFW" -I"/localhome/hoefler/alice/sw/BUILD/0bcd6a74af90572b07a0ee64de788c222c52ad47/AliPhysics/CORRFW/" -I"$ALICE_ROOT/include"
+=== TOP CONTAINER:
+Container: cAUTO_INPUT     DATA TYPE: TChain
+= Not connected to a data producer
+ = Client tasks indented below:
+______________________________________________________________________________
+   task: name  ACTIVE=0 POST_LOOP=0
+      INPUT #0: TChain <-  [cAUTO_INPUT]
+      OUTPUT #0: TTree ->  [NO CONTAINER]
+      OUTPUT #1: TList ->  [MyOutputContainer]
+      Container: MyOutputContainer     DATA TYPE: TList
+       = Filename: AnalysisResults.root  folder: MyTask
+***************************************
+    Getting chain of trees aodTree
+***************************************
+### Run number detected from chain: 167813
+(TClass *) 0x2f61ef0
+===== RUNNING LOCAL ANALYSIS AnalysisTaskExample ON TREE aodTree
+(TClass *) 0x2f61ef0
+Initialization time: 0.028471 [sec]
+Real time 0:01:10, CP time 7.260
+======== myAnalysis.C finished with exit code: 0 ========
+############## memory after: ##############
+              total        used        free      shared  buff/cache   available
+Mem:          15939        2179         666         424       13093       12963
+Swap:          8007           0        8007
+*******************************************************
+* Automatically generated validation script           *
+* Time:    Thu Jun 21 15:04:27 CEST 2018
+* Dir:     .
+* Workdir: /localhome/hoefler/alice/ALICE_analysis_tutorial
+* ----------------------------------------------------*
+total 726400
+drwxr-xr-x  4 hoefler users      4096 Jun 21 15:04 .
+drwxr-xr-x 10 hoefler users      4096 May 15 17:03 ..
+-rw-r--r--  1 hoefler users    143213 Jun 21 12:54 000167813.xml
+-rw-r--r--  1 hoefler users      1652 May 14 11:14 AddMyTask.C
+-rw-r--r--  1 hoefler users      4329 Jun  5 15:58 AddTaskPIDResponse.C
+-rw-r--r--  1 hoefler users     10481 Jun  6 14:09 AliAnalysisTaskMyTask1.cxx
+-rw-r--r--  1 hoefler users      1879 Jun  6 13:27 AliAnalysisTaskMyTask1.h
+-rw-r--r--  1 hoefler users      7109 Jun 21 12:49 AliAnalysisTaskMyTask.cxx
+-rw-r--r--  1 hoefler users      2018 Jun 21 15:02 AliAnalysisTaskMyTask_cxx_ACLiC_dict_rdict.pcm
+-rw-r--r--  1 hoefler users     18375 Jun 21 15:02 AliAnalysisTaskMyTask_cxx.d
+-rwxr-xr-x  1 hoefler users    301872 Jun 21 15:02 AliAnalysisTaskMyTask_cxx.so
+-rw-r--r--  1 hoefler users      1110 Jun 21 12:49 AliAnalysisTaskMyTask.h
+-rw-r-----  1 hoefler users 743217676 Aug  9  2016 AliAOD.root
+-rw-r--r--  1 hoefler users      4252 Jun 21 15:04 AnalysisResults.root
+drwxr-xr-x  8 hoefler users      4096 May 14 11:14 .git
+-rw-r--r--  1 hoefler users        35 May 14 11:14 .gitignore
+-rw-r--r--  1 hoefler users      3602 Jun 21 15:03 myAnalysis.C
+-rw-r--r--  1 hoefler users      1622 Jun 21 12:55 myTask.jdl
+-rw-r--r--  1 hoefler users      3326 Jun 21 15:03 myTask_merge.C
+-rw-r--r--  1 hoefler users      1629 Jun 21 12:55 myTask_merge_final.jdl
+-rw-r--r--  1 hoefler users      1891 Jun 21 12:55 myTask_merge.jdl
+-rw-r--r--  1 hoefler users      1359 Jun 21 15:03 myTask_merge.sh
+-rw-r--r--  1 hoefler users      9127 Jun 21 15:03 myTask.root
+-rw-r--r--  1 hoefler users      1408 Jun 21 15:03 myTask.sh
+-rw-r--r--  1 hoefler users      2058 Jun 21 15:03 myTask_validation_merge.sh
+-rw-r--r--  1 hoefler users      2256 Jun 21 15:03 myTask_validation.sh
+-rw-r--r--  1 hoefler users         0 Jun 21 15:04 outputs_valid
+-rw-r--r--  1 hoefler users        89 May 14 11:14 README.md
+-rw-r--r--  1 hoefler users      6296 Jun 21 14:29 runAnalysis.C
+-rw-r--r--  1 hoefler users       116 Jun 21 15:03 stderr
+-rw-r--r--  1 hoefler users       852 Jun 21 15:03 wn.xml
+* ----------------------------------------------------*
+* ----------------   Job Validated  ------------------*
+* ----------------------------------------------------*
+*******************************************************
+/localhome/hoefler/alice/ALICE_analysis_tutorial
+I-AliAnalysisManager::StartAnalysis: Grid analysis was stopped and cannot be terminated
